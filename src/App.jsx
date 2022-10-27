@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import HelloWorld from './components/hello-world';
+import ComponentUsingOnyx from './components/ComponentUsingOnyx';
 
 class App extends Component {
   constructor(props) {
@@ -9,7 +10,12 @@ class App extends Component {
   }
 
   render() {
-    return <HelloWorld title="Hello from React webpack" />;
+    return (
+      <section>
+        <HelloWorld title="Hello from React webpack" />
+        <ComponentUsingOnyx />
+      </section>
+    );
   }
 }
 

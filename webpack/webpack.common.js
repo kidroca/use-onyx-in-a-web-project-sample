@@ -1,6 +1,4 @@
 const webpack = require('webpack');
-const convert = require('koa-connect');
-const history = require('connect-history-api-fallback');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
@@ -33,16 +31,6 @@ module.exports = {
         ],
       },
     ],
-  },
-  serve: {
-    add: app => {
-      app.use(convert(history()));
-    },
-    content: commonPaths.entryPath,
-    dev: {
-      publicPath: commonPaths.outputPath,
-    },
-    open: true,
   },
   resolve: {
     modules: ['src', 'node_modules'],
